@@ -1,0 +1,66 @@
+.footer {
+  margin-top: clamp(64px,10vw,140px);
+  background: #1c2430;
+}
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px clamp(20px,5vw,80px);
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.logoMark { font-size: 16px; color: #8a5a2b; line-height: 1; }
+.logoText {
+  font-family: 'DM Sans',sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #e6e0d6;
+}
+.tagline {
+  font-family: 'DM Sans',sans-serif;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(230,224,214,0.3);
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.linksLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(230,224,214,0.2);
+  margin-bottom: 4px;
+}
+.link {
+  font-family: 'DM Sans',sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(230,224,214,0.4);
+  transition: color .2s;
+}
+.link:hover { color: #e6e0d6; }
+.copy {
+  font-family: 'DM Sans',sans-serif;
+  font-size: 11px;
+  color: rgba(230,224,214,0.3);
+  line-height: 2;
+}
+.rule {
+  height: 1px;
+  background: rgba(230,224,214,0.06);
+}

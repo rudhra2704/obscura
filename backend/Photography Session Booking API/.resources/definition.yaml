@@ -1,0 +1,8 @@
+$kind: collection
+description: Postman collection for every backend endpoint.
+variables:
+  baseUrl: http://localhost:5001
+  token: ""
+  photographerId: ""
+  bookingId: ""
+  availableDate: 2026-10-15

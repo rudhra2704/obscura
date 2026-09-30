@@ -1,0 +1,18 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e6e0d6;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@media (pointer: fine) {
+  :global(*) {
+    cursor: none !important;
+  }
+}

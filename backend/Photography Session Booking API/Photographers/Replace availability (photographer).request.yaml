@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/api/photographers/availability"
+method: PUT
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "dates": ["2026-10-15", "2026-10-20"]
+    }
+order: 6000

@@ -1,0 +1,15 @@
+$kind: http-request
+description: Save the returned _id as {{bookingId}}.
+url: "{{baseUrl}}/api/bookings"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "photographerId": "{{photographerId}}",
+      "sessionDate": "2026-10-15"
+    }
+order: 1000

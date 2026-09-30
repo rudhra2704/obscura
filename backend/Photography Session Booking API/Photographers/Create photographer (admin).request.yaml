@@ -1,0 +1,18 @@
+$kind: http-request
+description: Save the returned _id as {{photographerId}}.
+url: "{{baseUrl}}/api/photographers"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{token}}
+body:
+  type: text
+  content: |-
+    {
+      "name": "Alex Lens",
+      "email": "alex@studio.com",
+      "password": "photo123",
+      "specialty": "Wedding",
+      "pricePerSession": 250
+    }
+order: 1000

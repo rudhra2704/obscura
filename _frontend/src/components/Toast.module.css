@@ -1,0 +1,21 @@
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background: #1c2430;
+  border: 1px solid rgba(230,224,214,0.13);
+  color: #e6e0d6;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 14px 28px;
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, transform .3s;
+  white-space: nowrap;
+}
+.show    { opacity: 1; transform: translateX(-50%) translateY(0); }
+.error   { border-color: #4b1e23; color: #d47a7a; }
+.success { border-color: #6b6f4e; color: #9aad7e; }

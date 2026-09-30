@@ -1,0 +1,134 @@
+/* ── Stat Strip ── */
+.statStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(230,224,214,0.05);
+  margin: 0 clamp(20px,5vw,80px) 0;
+  border: 1px solid rgba(230,224,214,0.05);
+}
+.statCard {
+  padding: 32px 28px;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.statVal {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: #e6e0d6;
+  line-height: 1;
+}
+.statLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(230,224,214,0.3);
+}
+
+/* ── Main layout ── */
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: rgba(230,224,214,0.05);
+  margin: 1px clamp(20px,5vw,80px) 40px;
+  border: 1px solid rgba(230,224,214,0.05);
+  border-top: none;
+}
+
+/* ── Date rows ── */
+.dateRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(230,224,214,0.05);
+}
+.dateVal {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #cec7bc;
+}
+.removeBtn {
+  font-size: 14px;
+  color: rgba(230,224,214,0.2);
+  cursor: pointer;
+  transition: color .2s;
+  background: transparent;
+  padding: 4px;
+  border: none;
+}
+.removeBtn:hover { color: #d47a7a; }
+
+/* ── Booking table (full width card) ── */
+.bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.bookingTable th {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(230,224,214,0.25);
+  padding: 0 0 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(230,224,214,0.07);
+}
+.bookingTable td {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(230,224,214,0.04);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #cec7bc;
+  vertical-align: middle;
+  padding-right: 24px;
+}
+.bookingTable tr:hover td { background: rgba(255,255,255,0.012); }
+
+.clientName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #e6e0d6;
+}
+.clientEmail {
+  font-size: 11px !important;
+  color: #617891 !important;
+}
+.dim { color: rgba(230,224,214,0.3) !important; font-size: 11px !important; }
+
+/* ── Status badges ── */
+.confirmed {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #6b6f4e;
+  border: 1px solid #6b6f4e;
+}
+.cancelled {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 9px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #4b1e23;
+  border: 1px solid #4b1e23;
+}
+
+@media (max-width:900px) {
+  .statStrip { grid-template-columns: repeat(2, 1fr); }
+  .layout { grid-template-columns: 1fr; }
+}
+@media (max-width:600px) {
+  .statStrip { grid-template-columns: repeat(2, 1fr); margin: 0 16px; }
+  .layout { margin: 1px 16px 40px; }
+  .statVal { font-size: 36px; }
+}

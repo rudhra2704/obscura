@@ -1,0 +1,14 @@
+$kind: http-request
+description: Copy the token from the response into the {{token}} collection variable.
+url: "{{baseUrl}}/api/auth/login"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "email": "admin@studio.com",
+      "password": "admin123"
+    }
+order: 2000
